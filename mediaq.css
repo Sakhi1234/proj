@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media screen and (max-width:770px){
+    .banner-text h1{
+        font-size:49px;
+    }
+    .banner-text p{
+        font-size: 18px;
+    }
+    .aboutfern .col2{
+        margin-left: 26px;
+    }
+    #banner{
+        width: 130vw;
+    }
+    #image{
+        width: 120vw;
+    }
+    .contentbox{
+        width: 300px;
+        height: auto;
+        flex-direction: column;
+    }
+    .contentbox img{
+        width: 200px;
+        height: 210px;
+        margin: auto;
+    }
+    .contentbox .imgbox{
+        height: 200px;
+        transform: translate(-50px);
+    }
+    .contentbox .contentb{
+        height: auto;
+        text-align: center;
+        padding: 20px;
+        padding-top: 0;
+    }
+}
+/* @media screen and (max-width:600px){
+   .nav-ul{
+       width: 100%;
+       flex-direction: column;
+       display: none;
+       margin-top:8px;
+   } 
+.nav-ul li{
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid rgb(194, 8, 123);
+}
+.nav-ul li:last-child{
+    border-bottom: 2px solid rgb(194, 8, 123);
+}
+.logo{
+    margin: auto;
+    text-align: center;
+}
+.list:before{
+    
+}
+.hamburger{
+    display: block;
+}
+.list,.close{
+    display: block;
+    visibility: visible;
+}
+.show{
+    display: flex;
+}
+.hide{
+    display: none;
+}
+.button{
+    margin: auto;
+    display: none;
+}
+}
+@media  screen and (min-width:600px) {
+    .close{
+        visibility: hidden;
+    }
+} */

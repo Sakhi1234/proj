@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+</head>
+<body>
+    <div class="popup">
+        <div class="contentbox">
+            <div class="cicons"></div>
+            <div class="imgbox">
+                <img src="./fern.png">
+            </div>
+            <div class="contentb">
+                <div>
+                <h3> Special Offer</h3>
+                <h2>30% OFF</h2>
+                <p>Get flat 30% off on your first order.</p>
+                <a href="#">Avail Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+.popup{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+/* .contentbox .imgbox::before{
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color:lightblue;
+    border-radius: 50%;
+} */
+.contentbox{
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background: lightblue;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 0 5px 15px darkblue;
+}
+.contentbox img{
+    position: relative;
+    height: 300px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 28px;
+}
+.contentbox .imgbox img{
+    position: relative;
+    max-width: 250px;
+    z-index: 1;
+}
+.contentbox .contentb{
+     position: relative;
+     width: 300px;
+     height: 400px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.contentbox .contentb h3{
+    font-weight: bold;
+    font-size: 29px;
+    font-family: 'RocknRoll One', sans-serif;
+}
+.contentbox .contentb h2{
+    font-size: 34px;
+    color: red;
+}
+.contentbox .contentb p{
+    font-weight: 300;
+}
+.contentbox .contentb a{
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: red;
+    color:white;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.contentbox .contentb a:hover{
+    color: yellow;
+}
+.cicons{
+    position: absolute;
+    cursor:pointer;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: url(./close.png) no-repeat center;
+    background-size: 17px;
+    border-radius: 10px;
+    z-index: 10;
+}
+@media (max-width:770px)
+{
+.contentbox{
+    width: 300px;
+    height: auto;
+    flex-direction: column;
+}
+.contentbox img{
+    width: 200px;
+    height: 210px;
+    margin: auto;
+}
+.contentbox .imgbox{
+    height: 200px;
+    transform: translate(-50px);
+}
+.contentbox .contentb{
+    height: auto;
+    text-align: center;
+    padding: 20px;
+    padding-top: 0;
+}
+}
+
+
+</style>
+<script>
+    const popup=document.querySelector(".popup");
+    const closep=document.querySelector(".cicons");
+    window.onload=function(){
+        setTimeout(function(){
+            popup.style.display="block";
+        },5000)
+    }
+    closep.addEventListener("click",()=>{
+        popup.style.display="none";
+    })
+</script>
+    
+</body>
+</html>

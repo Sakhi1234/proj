@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+overflow-x: hidden;
+}
+#banner{
+    background: url(./succulentimage.jpg) center/cover;
+    height: 100vh;
+
+    /* background-position: cover cover;
+    width: 100vw; */
+}
+.logo{
+    position: absolute;
+    top: 5%;
+    left: 14%;
+    color: rgb(243, 139, 41);
+    font-family: 'Courgette', cursive;
+}
+.banner-text{
+    text-align: center;
+    color: white;
+    padding-top: 180px;
+}
+.banner-text h1{
+font-size: 70px;
+font-family: 'Tangerine', cursive;
+animation:headings 0.7s ease-in;
+}
+.banner-text p{
+    font-size: 30px;
+    margin-top: 19px;
+    font-family: 'Merienda One', cursive;
+    animation: headings 1.4s ease-in;
+}
+#sidenavigate{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background:rgba(233, 14, 14, 0.993);
+    z-index: 2;
+    transition: 0.5s;
+}
+nav ul li{
+    list-style: none;
+    margin: 79px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: mediumturquoise;
+    font-family: 'Rancho', cursive;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    
+}
+.list{
+    position: relative;
+}
+nav ul li a::before{
+    position: absolute;
+    content: "";
+    left:0;
+    bottom:-3px;
+    width: 80%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.6s;
+}
+nav ul li a:hover::before{
+    transform: scaleX(1);
+}
+nav ul li a:hover{
+    color: gold;
+}
+#mbn{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: fixed;
+  right: 30px;
+  top:30px;
+  border-radius: 3px;
+  z-index: 3;
+  cursor: pointer;
+}
+#mbn img{
+    width: 20px;
+    margin-top: 4px;
+}
+.about{
+    color: black;
+    text-align: center;
+    font-family: 'Merienda One', cursive;
+    font-size:32px;
+    display: flex;
+    margin-top: 23px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.col1{
+    margin-bottom: 0;
+    margin-left: 70px;
+    margin-top: 57px;
+    animation: images 5s ease-in;
+}
+.col1 img{
+    height: 350px;
+    
+}
+.aboutfern{
+    display: flex;
+    flex-wrap: wrap;
+}
+.aboutfern .col2{
+    margin-top:64px;
+    margin-left: 98px;
+    font-size: 29px;
+    max-width: 500px;
+    color:rgb(16, 16, 139);
+}
+.about-line h2{
+    margin: 50px 0 10px;
+    font-size: 28px;
+    font-style: italic;
+    color: chartreuse;
+}
+.about-line{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+@keyframes headings{
+    0%{
+      transform:skew(43deg) translateX(-500px);
+    }
+    100%{
+       transform: skew(0deg);
+    }
+}
+@keyframes images{
+    0%{
+        transform:skew(0deg) translateX(-500px);
+      }
+      100%{
+         transform: skew(0deg);
+      }
+}
+.intcards{
+    color:black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    row-gap: 32px;
+    column-gap: 82px;
+    margin-left: 27px;
+    margin-top: 40px;
+    margin-right: 27px;
+    text-align: center;
+}
+
+.card{
+    height: 390px;
+    box-shadow: 5px 5px 25px -5px thistle;
+}
+.indoor{
+    color: white;
+    padding-top: 109px ;
+    transition: 0.5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    font-family: 'RocknRoll One', sans-serif;
+    visibility: hidden;
+}
+.card:hover .indoor{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+.outdoor{
+    color:white;
+    padding-top: 109px ;
+    transition: 0.5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    font-family: 'RocknRoll One', sans-serif;
+    visibility: hidden;
+}
+.card:hover .outdoor{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+.signature{
+    color:white;
+    font-weight: bold;
+    padding-top: 109px ;
+    transition: 0.5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    font-family: 'RocknRoll One', sans-serif;
+    visibility: hidden;
+}
+.card:hover .signature{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+.card1{
+    background: url(./indoorp.jpg) no-repeat center/cover;
+    width:100%;
+    height: 100%;
+    box-shadow: 5px 5px 25px -2px rgb(241, 124, 222);
+}
+.card2{
+    background: url(./outdoorp.webp)  no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 25px -2px rgb(86, 144, 245);
+}
+.card3{
+    background: url(./terrarium-plants.jpg) no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 25px -2px rgb(122, 117, 117);
+}
+.copy{
+    display: flex;
+    padding-top:35px;
+    transition: 0.5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    visibility: hidden;
+    color: white;
+}
+.card:hover .copy{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+.card1 a{
+    text-decoration: none;
+    position: relative;
+    margin: 8px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    display: inline-block;
+    color: black;
+    transition: 0.5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+}
+.card2 a{
+    text-decoration: none;
+    position: relative;
+    margin: 8x;
+    padding: 10px 20px;
+    border: 2px solid white;
+    display: inline-block;
+    color: black;
+    transition: 0.5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+}
+.card3 a{
+    text-decoration: none;
+    position: relative;
+    margin: 14px;
+    margin-top: 14px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    display: inline-block;
+    color: black;
+    transition: 0.5s;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+}
+.card:hover .card1 a{
+    transform: translateY(0);
+    opacity: 1;
+    font-family: 'Fredoka One', cursive;
+    visibility: visible;
+}
+.card:hover .card2 a{
+    transform: translateY(0);
+    opacity: 1;
+    font-family: 'Fredoka One', cursive;
+    visibility: visible;
+}
+.card:hover .card3 a{
+    transform: translateY(0);
+    opacity: 1;
+    font-family: 'Fredoka One', cursive;
+    visibility: visible;
+}
+.card a:hover{
+    color:black;
+    background: white;
+}
+.hcards{
+    color: black;
+    text-align: center;
+    font-family: 'Merienda One', cursive;
+    margin-top: 27px;
+}
+.heading {
+    margin-left: 120px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Merienda One', cursive;
+    display: flex;
+    text-align: center;
+}
+.popup{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.contentbox{
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background: lightblue;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 0 5px 15px darkblue;
+}
+.contentbox img{
+    position: relative;
+    height: 300px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 28px;
+}
+.contentbox .imgbox img{
+    position: relative;
+    max-width: 250px;
+    z-index: 1;
+}
+.contentbox .contentb{
+     position: relative;
+     width: 300px;
+     height: 400px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.contentbox .contentb h3{
+    font-weight: bold;
+    font-size: 29px;
+    font-family: 'RocknRoll One', sans-serif;
+}
+.contentbox .contentb h2{
+    font-size: 34px;
+    color: red;
+}
+.contentbox .contentb p{
+    font-weight: 300;
+}
+.contentbox .contentb a{
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: red;
+    color:white;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.contentbox .contentb a:hover{
+    color: yellow;
+}
+.cicons{
+    position: absolute;
+    cursor:pointer;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: url(./close.png) no-repeat center;
+    background-size: 17px;
+    border-radius: 10px;
+    z-index: 10;
+}
+#imgp{
+    position: relative;
+    
+}
+#image{
+    overflow: hidden;
+    cursor:pointer;
+    width: 100vw;
+    overflow-x: hidden;
+    
+}
+#image figure{
+position: relative;
+width: 500%;
+margin: 0;
+margin-top: 29px;
+left: 0;
+animation: 14s is infinite;
+}
+#image figure img{
+    width: 20%;
+    float: left;
+}
+@keyframes is{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left:-100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    95%{
+        left:-100%;
+    }
+}
+.form{
+    position: relative;
+    margin-top: 600px;
+}
+ #footer{
+     position: relative;
+     margin-top: 600px;
+     /* background: black; */
+     color: black;
+     
+     margin-left: 0;
+ } 
+ .footer-rows{
+     width: 80%;
+     margin: 0 auto;
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+ }
+
+ .footer-left,.footer-cent{
+     flex-basis: 45%;
+     padding: 10px;
+     margin-bottom: 20px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    list-style: none;
+    text-align: center;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+nav ul{
+display: inline-block;
+list-style:none;
+}
+a{
+    text-decoration: none;
+}
+.mcontainer{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col2{
+    min-width: 300px;
+}
+.col2 img{
+    max-width: 100%;
+} */
